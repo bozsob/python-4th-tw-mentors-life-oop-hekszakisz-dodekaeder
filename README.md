@@ -1,0 +1,1 @@
+# python-4th-tw-mentors-life-oop-hekszakisz-dodekaeder
