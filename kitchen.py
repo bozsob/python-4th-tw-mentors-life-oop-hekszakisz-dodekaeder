@@ -20,7 +20,8 @@ class Kitchen():
         if self.coffee <= 0:
             print("Elfogyott a mana potion!!!")
             raise ValueError
-        print("{}{} {}".format("\n", self.coffee, "liter kávé maradt még.\n"))
+        print(
+            "{}{} {}".format("\n", self.coffee, "liter kávé maradt még a hűtőben.\n"))
 
     def fridge_space_left(self, food_amount):
         self.food = self.fridge_space - food_amount
