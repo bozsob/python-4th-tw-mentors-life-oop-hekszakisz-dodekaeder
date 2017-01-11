@@ -28,5 +28,3 @@ class Mentor(Person):
             data_from_csv[i][4] = temp_mentor_instance.nickname
             mentors.append(temp_mentor_instance)
         return mentors
-
-print(Mentor.create_by_csv())

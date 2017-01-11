@@ -30,5 +30,3 @@ class Student(Person):
             data_from_csv[i][5] = temp_student_instance.energy_level
             students.append(temp_student_instance)
         return students
-
-print(Student.create_by_csv())
