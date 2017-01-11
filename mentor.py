@@ -12,7 +12,7 @@ class Mentor(Person):
         self.nickname = None
 
     @classmethod
-    def create_by_csv(cls, path):
+    def create_by_csv(cls, path="data/mentors.csv"):
         data_from_csv = []
         mentors = []
         with open(path, newline='') as myfile:
@@ -28,3 +28,5 @@ class Mentor(Person):
             data_from_csv[i][4] = temp_mentor_instance.nickname
             mentors.append(temp_mentor_instance)
         return mentors
+
+print(Mentor.create_by_csv())
