@@ -6,7 +6,7 @@ class Person:
         self.year_of_birth = year_of_birth
         self.gender = gender
         if gender in ("male", "female", "not sure"):
-            continue
+            self.gender = gender
         else:
             raise AttributeError
 
