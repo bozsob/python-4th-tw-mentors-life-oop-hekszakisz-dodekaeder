@@ -9,11 +9,17 @@ None
 ## Attributes
 
 * ```meeting_time```
-  * data type: float
+  * data type: time
   * description: Contains the starting time of the meeting.
 * ```topics```
   * data type: list
   * description: A list about the meting topics.
+* ```hours```
+  * data type: list
+  * description: A list about the meting time hours.
+* ```minutes```
+  * data type: list
+  * description: A list about the meting time minutes.
 
 ## Class methods
 None
@@ -25,7 +31,7 @@ The constructor of the object.
 
 #### Arguments
 
-All of the arguments of the class itself.
+
 
 #### Return value
 None
@@ -35,9 +41,7 @@ None
 Returns the time remaining to the next meeting.
 
 #### Arguments
-* ```meeting_time```
-  * data type: float
-  * description: Contains the starting time of the meeting.
+None
 
 #### Return value
 
