@@ -3,19 +3,30 @@ import csv
 
 
 class Student(Person):
-    try:
-        def __init__(self, first_name, last_name, year_of_birth, gender, knowledge_level, energy_level):
-            super().__init__(self, first_name, last_name, year_of_birth, gender)
-            self.knowledge_level = knowledge_level
-            self.energy_level = energy_level
 
-        @staticmethod
-        def create_by_csv(path):
-            students = []
-            with open(path, newline="") as data:
-                for line in data:
-                    students.append(line.strip().split(","))
-            return students
+    def __init__(self):
+        self.first_name = None
+        self.last_name = None
+        self.year_of_birth = None
+        self.gender = None
+        self.knowledge_level = None
+        self.energy_level = None
 
-    except:
-        raise ValueError
+    @classmethod
+    def create_by_csv(self, path="data/students.csv"):
+        data_from_csv = []
+        students = []
+        with open(path, newline='') as myfile:
+            for line in myfile:
+                data_from_csv.append(line.strip().split(','))
+
+        temp_student_instance = Student()
+        for i in range(len(data_from_csv)):
+            data_from_csv[i][0] = temp_student_instance.first_name
+            data_from_csv[i][1] = temp_student_instance.last_name
+            data_from_csv[i][2] = temp_student_instance.year_of_birth
+            data_from_csv[i][3] = temp_student_instance.gender
+            data_from_csv[i][4] = temp_student_instance.knowledge_level
+            data_from_csv[i][5] = temp_student_instance.energy_level
+            students.append(temp_student_instance)
+        return students
