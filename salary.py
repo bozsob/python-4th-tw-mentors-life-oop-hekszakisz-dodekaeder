@@ -27,7 +27,7 @@ class Salary:
             print("\nLassan vegyél vissza a sörikéből komám!\n")
         if abs(self.pay_date - self.now).days < 10 and abs(self.pay_date - self.now).days > 5:
             print(
-                "\nNa most már nincs itt ilyen luxus, mint a Fapados vagy a Batyutéka!! Egyél szépen májkrémes kenyere!\n")
+                "\nNa most már nincs itt ilyen luxus, mint a Fapados vagy a Batyutéka!! Egyél szépen májkrémes kenyeret!\n")
         if abs(self.pay_date - self.now).days <= 5:
             print(
                 "\nSzáraz a kenyér bástya? Sebaj, jó az még pirítósnak! Meleg vízzel meg csak a gyengék tusolnak!\n")
