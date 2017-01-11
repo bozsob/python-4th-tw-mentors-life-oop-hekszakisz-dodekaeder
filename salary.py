@@ -7,7 +7,7 @@ class Salary:
         self.pay_day = pay_day
         if self.pay_day > 31:
             print("Days can\'t be greater than 31 days.")
-            return ValueError
+            raise ValueError
         self.now = datetime.date.today()
         self.year = self.now.year
         self.month = self.now.month + 1
@@ -17,8 +17,21 @@ class Salary:
         if self.pay_date == self.now:
             print("\nToday is the golden day mate!!")
         else:
-            print("\nNext pay date is " + str(self.pay_date) + ". " + str(abs(self.pay_date - self.now)
-                                                                          .days) + " days left for the next salary.\n")
+            print("\nA következő fizetés dátuma: " + str(self.pay_date) + ". " + str(abs(self.pay_date - self.now)
+                                                                                     .days) + " nap van még hátra a következő fizetésig.\n")
 
-jani = Salary(5)
-jani.days_until_payday()
+    def warning_messages(self):
+        if abs(self.pay_date - self.now).days >= 5:
+            print("\nHabzsi-dőzsi van kispajtás!!! Basszál beljebb!!\n")
+        if abs(self.pay_date - self.now).days >= 10 and abs(self.pay_date - self.now).days < 20:
+            print("\nLassan vegyél vissza a sörikéből komám!\n")
+        if abs(self.pay_date - self.now).days < 10 and abs(self.pay_date - self.now).days > 5:
+            print(
+                "\nNa most már nincs itt ilyen luxus, mint a Fapados vagy a Batyutéka!! Egyél szépen májkrémes kenyeret!\n")
+        if abs(self.pay_date - self.now).days <= 5:
+            print(
+                "\nSzáraz a kenyér bástya? Sebaj, jó az még pirítósnak! Meleg vízzel meg csak a gyengék tusolnak!\n")
+
+robi = Salary(5)
+robi.days_until_payday()
+robi.warning_messages()
