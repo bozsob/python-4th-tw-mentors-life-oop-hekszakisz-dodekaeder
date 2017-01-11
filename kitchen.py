@@ -9,7 +9,7 @@ class Kitchen():
         self.fridge_space = 2000
         self.phrases = [
             "Jönnek az arabok? Akkor kéne ide egy falra szerelhető kecske lyuk!", "Basszunk beljebb!!!",
-            "Rendeljünk egy zsíroskenyér kenésű űrtalicskát!", "Kéne ide egy bicikli hajtású majomkenyérfa!"]
+            "Rendeljünk egy zsíroskenyér kenésű csúszó űrtalicskát!", "Kéne ide egy bicikli hajtású majomkenyérfa!"]
 
     def pakkos_phrases(self):
         print(

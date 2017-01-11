@@ -31,7 +31,3 @@ class Salary:
         if abs(self.pay_date - self.now).days <= 5:
             print(
                 "\nSzáraz a kenyér bástya? Sebaj, jó az még pirítósnak! Meleg vízzel meg csak a gyengék tusolnak!\n")
-
-robi = Salary(5)
-robi.days_until_payday()
-robi.warning_messages()
