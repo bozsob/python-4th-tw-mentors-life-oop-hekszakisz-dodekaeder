@@ -12,8 +12,8 @@ class Student(Person):
         self.knowledge_level = None
         self.energy_level = None
 
-    @staticmethod
-    def create_by_csv(path):
+    @classmethod
+    def create_by_csv(self, path="data/students.csv"):
         data_from_csv = []
         students = []
         with open(path, newline='') as myfile:
@@ -30,3 +30,5 @@ class Student(Person):
             data_from_csv[i][5] = temp_student_instance.energy_level
             students.append(temp_student_instance)
         return students
+
+print(Student.create_by_csv())
