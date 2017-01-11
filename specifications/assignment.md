@@ -18,7 +18,7 @@ None
 The constructor of the object.
 
 #### Attributes
-ALL of the arguments of the 
+ALL of the arguments of the class.
 
 #### Return value
 None

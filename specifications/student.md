@@ -15,6 +15,17 @@ Person
   * data type: integer
   * description: current energy level
 
+## Class method
+
+### ```create_by_csv```
+Gives back a list of students.
+
+### Arguments
+Gets a csv file path as an argument (the csv contains all the data needed to instantiate a student object).
+
+### Return value
+List of students
+
 ## Instance method
 
 ### ```__init__```
@@ -25,12 +36,3 @@ The constructor should call the parent class's constructor
 
 ### Return value
 ValueError if the attributes are empty
-
-### ```create_by_csv```
-Gives back a list of students.
-
-### Arguments
-Gets a csv file path as an argument (the csv contains all the data needed to instantiate a student object).
-
-### Return value
-List of students
