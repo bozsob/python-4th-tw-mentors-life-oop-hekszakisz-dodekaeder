@@ -35,6 +35,12 @@ class CodecoolClass:
         print("\n")
         print("'" + full_name + "'" + " nevű tanuló nincs nálunk.")
 
-miskolc = CodecoolClass.generate_local()
+    def find_mentor_by_full_name(self, full_name):
 
-miskolc.find_student_by_full_name("cica")
+        for i in range(len(self.mentors)):
+            if self.mentors[i].last_name + " " + self.mentors[i].first_name == full_name:
+                print("Igen, '" + str(self.mentors[i]) +
+                      "' megtalálható a mentorok között.")
+                return self.mentors[i]
+        print("\n")
+        print("'" + full_name + "'" + " nevű mentor nincs nálunk.")
