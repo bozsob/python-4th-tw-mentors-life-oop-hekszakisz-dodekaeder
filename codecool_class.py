@@ -34,7 +34,3 @@ class CodecoolClass:
                 return self.students[i]
         print("\n")
         print("'" + full_name + "'" + " nevű tanuló nincs nálunk.")
-
-miskolc = CodecoolClass.generate_local()
-
-miskolc.find_student_by_full_name("cica")

@@ -35,8 +35,3 @@ class Assignment:
             "Nincs kedvem assignment-et írni, keressetek mást.", "Zöldségek", "OOP - Orbitális Otthoni Palacsinta", "Vegyigyümi"]
         result = random.choice(assignments_list)
         print("Mentor a következő Assignment-et írta: " + result)
-
-atesz = Assignment("Molnár Attila")
-
-atesz.grading_assignment("Bozsó Beatrix")
-atesz.making_assignment()
