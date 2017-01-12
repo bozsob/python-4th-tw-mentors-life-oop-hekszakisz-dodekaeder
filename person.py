@@ -12,3 +12,6 @@ class Person:
 
     def __str__(self, person):
         return (self.last_name + " " + self.first_name)
+
+bubi = Person("Vajni", "Zsolt", 1986, "male")
+print(bubi.__str__("Vajni"))
