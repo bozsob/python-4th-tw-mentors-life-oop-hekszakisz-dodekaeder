@@ -19,12 +19,12 @@ class Mentor(Person):
             for line in myfile:
                 data_from_csv.append(line.strip().split(','))
 
-        temp_mentor_instance = Mentor()
         for i in range(len(data_from_csv)):
-            data_from_csv[i][0] = temp_mentor_instance.first_name
-            data_from_csv[i][1] = temp_mentor_instance.last_name
-            data_from_csv[i][2] = temp_mentor_instance.year_of_birth
-            data_from_csv[i][3] = temp_mentor_instance.gender
-            data_from_csv[i][4] = temp_mentor_instance.nickname
-            mentors.append(temp_mentor_instance)
+            temp_mentor = Mentor()
+            temp_mentor.first_name = data_from_csv[i][0]
+            temp_mentor.last_name = data_from_csv[i][1]
+            temp_mentor.year_of_birth = data_from_csv[i][2]
+            temp_mentor.gender = data_from_csv[i][3]
+            temp_mentor.nickname = data_from_csv[i][4]
+            mentors.append(temp_mentor)
         return mentors
