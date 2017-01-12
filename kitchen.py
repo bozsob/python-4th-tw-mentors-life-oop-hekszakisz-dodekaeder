@@ -11,10 +11,11 @@ class Kitchen():
         self.mentor_in_kitchen = str(
             Mentor.create_by_csv()[random.randint(0, 4)])
         self.student_in_kitchen = str(
-            Student.create_by_csv()[random.randint(0, 2)])
+            Student.create_by_csv()[random.randint(0, 28)])
         self.phrases = [
             "Jönnek az arabok? Akkor kéne ide egy falra szerelhető kecske lyuk!", "Basszunk beljebb!!!",
-            "Rendeljünk egy zsíroskenyér kenésű csúszó űrtalicskát!", "Kéne ide egy bicikli hajtású majomkenyérfa!", "Készítsünk koszos zokni ízű sört!"]
+            "Rendeljünk egy zsíroskenyér kenésű csúszó űrtalicskát!", "Kéne ide egy bicikli hajtású majomkenyérfa!",
+            "Készítsünk koszos zokni ízű sört!", "Mi van ma? Korhely Kedd?Csatak Csütörtök? Ja, hogy pusztulat Péntek!"]
 
     def who_is_in_the_kitchen(self):
         if self.mentor_in_kitchen != "Monoczki Pál":
@@ -37,6 +38,8 @@ class Kitchen():
             "{}{} {} {} {} {}".format("\n", self.student_in_kitchen, consumed_amount, "liter kávét betolt, ", self.coffee, "liter kávé maradt még.\n"))
 
     def fridge_space_left(self, food_amount):
+        self.student_in_kitchen = str(
+            Student.create_by_csv()[random.randint(0, 28)])
         self.food = self.fridge_space - food_amount
         if self.food <= 0:
             print("\nNincs több hely a lembasz kenyérnek!\n")

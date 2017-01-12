@@ -18,9 +18,9 @@ class CodecoolClass:
 
     @classmethod
     def generate_local(cls):
-        print("Mentors are initialized from CSV.")
-        print("Students are initialized from CSV.")
-        print("School @ {}, in year {} is created, with {} mentors and {} students.".format(
+        print("\nMentors are initialized from CSV.")
+        print("\nStudents are initialized from CSV.")
+        print("\nSchool @ {}, in year {} is created, with {} mentors and {} students.".format(
             cls.location, cls.year, len(cls.mentors), len(cls.students)))
 
         return CodecoolClass(cls.location, cls.year, cls.mentors, cls.students)
@@ -29,7 +29,7 @@ class CodecoolClass:
 
         for i in range(len(self.students)):
             if self.students[i].last_name + " " + self.students[i].first_name == full_name:
-                print("Igen, '" + str(self.students[i]) +
+                print("\nIgen, '" + str(self.students[i]) +
                       "' megtalálható a tanulók között.")
                 return self.students[i]
         print("\n")
@@ -39,7 +39,7 @@ class CodecoolClass:
 
         for i in range(len(self.mentors)):
             if self.mentors[i].last_name + " " + self.mentors[i].first_name == full_name:
-                print("Igen, '" + str(self.mentors[i]) +
+                print("\nIgen, '" + str(self.mentors[i]) +
                       "' megtalálható a mentorok között.")
                 return self.mentors[i]
         print("\n")

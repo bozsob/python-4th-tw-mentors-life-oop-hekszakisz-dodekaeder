@@ -9,7 +9,7 @@ from meeting import Meeting
 
 
 codecool_msc2016 = CodecoolClass.generate_local()
-codecool_msc2016.find_student_by_full_name("Vajnorák Zsolt")
+codecool_msc2016.find_student_by_full_name("Bludaba Zsolt")
 
 
 def main():

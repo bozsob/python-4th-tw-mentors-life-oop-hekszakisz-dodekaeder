@@ -30,7 +30,7 @@ class Meeting:
         remaining = datetime.datetime.combine(datetime.date.today(), meeting_time) - \
             datetime.datetime.combine(datetime.date.today(), current_time)
         if remaining < datetime.timedelta(0, 0, 0):
-            print("\nMára nincs több megbeszéleés.")
+            print("\nMára nincs több megbeszélés.")
             return
         else:
             print("\nA következő megbeszélés " +
