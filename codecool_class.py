@@ -29,7 +29,12 @@ class CodecoolClass:
 
         for i in range(len(self.students)):
             if self.students[i].last_name + " " + self.students[i].first_name == full_name:
-                print("Yes, " + str(self.students[i]) +
-                      " was found between the students.")
+                print("Igen, '" + str(self.students[i]) +
+                      "' megtalálható a tanulók között.")
                 return self.students[i]
-        print("Not found in students.")
+        print("\n")
+        print("'" + full_name + "'" + " nevű tanuló nincs nálunk.")
+
+miskolc = CodecoolClass.generate_local()
+
+miskolc.find_student_by_full_name("cica")
