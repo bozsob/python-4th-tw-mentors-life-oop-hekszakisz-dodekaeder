@@ -1,5 +1,5 @@
-from person import Person
 import csv
+from person import Person
 
 
 class Student(Person):
@@ -20,13 +20,13 @@ class Student(Person):
             for line in myfile:
                 data_from_csv.append(line.strip().split(','))
 
-        temp_student_instance = Student()
         for i in range(len(data_from_csv)):
-            data_from_csv[i][0] = temp_student_instance.first_name
-            data_from_csv[i][1] = temp_student_instance.last_name
-            data_from_csv[i][2] = temp_student_instance.year_of_birth
-            data_from_csv[i][3] = temp_student_instance.gender
-            data_from_csv[i][4] = temp_student_instance.knowledge_level
-            data_from_csv[i][5] = temp_student_instance.energy_level
+            temp_student_instance = Student()
+            temp_student_instance.first_name = data_from_csv[i][0]
+            temp_student_instance.last_name = data_from_csv[i][1]
+            temp_student_instance.year_of_birth = data_from_csv[i][2]
+            temp_student_instance.gender = data_from_csv[i][3]
+            temp_student_instance.knowledge_level = data_from_csv[i][4]
+            temp_student_instance.energy_level = data_from_csv[i][5]
             students.append(temp_student_instance)
         return students
