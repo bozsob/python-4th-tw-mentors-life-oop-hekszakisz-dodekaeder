@@ -8,21 +8,30 @@ class Kitchen():
     def __init__(self):
         self.coffee_amount = 20
         self.fridge_space = 200
+        self.mentor_in_kitchen = str(
+            Mentor.create_by_csv()[random.randint(0, 4)])
+        self.student_in_kitchen = str(
+            Student.create_by_csv()[random.randint(0, 2)])
         self.phrases = [
             "Jönnek az arabok? Akkor kéne ide egy falra szerelhető kecske lyuk!", "Basszunk beljebb!!!",
             "Rendeljünk egy zsíroskenyér kenésű csúszó űrtalicskát!", "Kéne ide egy bicikli hajtású majomkenyérfa!", "Készítsünk koszos zokni ízű sört!"]
 
-    def print_mentor_list(self):
-        print(self.mentor_list)
+    def who_is_in_the_kitchen(self):
+        if self.mentor_in_kitchen != "Monoczki Pál":
+            print("\nA konyhában a következő személyek vannak:\nMentor: " +
+                  str(self.mentor_in_kitchen) + ", Pakko" + "\nCodecoolerek: " + str(self.student_in_kitchen))
+        else:
+            print("\nA konyhában a következő személyek vannak:\nMentor: " +
+                  str(self.mentor_in_kitchen) + "\nCodecoolerek: " + str(self.student_in_kitchen))
 
     def pakkos_phrases(self):
         print(
-            "{} {}".format("Pakko felkiáltott:", random.choice(self.phrases)))
+            "{} {}".format("\nPakko felkiáltott:", random.choice(self.phrases)))
 
     def coffee_left(self, consumed_amount):
         self.coffee = self.coffee_amount - consumed_amount
         if self.coffee <= 0:
-            print("Elfogyott a mana potion!!!")
+            print("\nElfogyott a mana potion!!!\n")
             raise ValueError
         print(
             "{}{} {} {} {}".format("\n", consumed_amount, "liter kávét betoltál, ", self.coffee, "liter kávé maradt még.\n"))
@@ -30,12 +39,12 @@ class Kitchen():
     def fridge_space_left(self, food_amount):
         self.food = self.fridge_space - food_amount
         if self.food <= 0:
-            print("\nNincs több hely a lembasz kenyérnek!")
+            print("\nNincs több hely a lembasz kenyérnek!\n")
             raise ValueError
         print(
             "{} {} {} {}".format(food_amount, "köbdeci ételt a hűtőbe raktál, ", self.food, "liter hely maradt még a hűtőben.\n"))
-
 jani = Kitchen()
-jani.coffee_left(5)
-jani.fridge_space_left(60)
+jani.who_is_in_the_kitchen()
 jani.pakkos_phrases()
+jani.coffee_left(5)
+jani.fridge_space_left(20)
