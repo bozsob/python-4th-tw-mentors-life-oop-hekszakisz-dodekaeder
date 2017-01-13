@@ -7,13 +7,7 @@ The Kitchen is a class that represents the hub of knowledge, food source, coffee
 None
 
 ## Attributes
-
-* ```coffee_amount```
-  * data type: integer
-  * description: represents the amount of coffee available for the students
-* ```fridge_space```
-  * data type: integer
-  * description: represents the volume of free space in the refridgerator
+None
 
 ## Instance method
 
@@ -21,7 +15,7 @@ None
 The constructor of the object.
 
 #### Arguments
-All of the arguments of the class itself.
+None.
 
 ### Return value
 ValueError if attributes are empty.
@@ -43,8 +37,7 @@ Calculates the amount of coffee left after the consumed amount of coffee
   * data type: integer
 
 ### Return value
-An integer, representing the amount of coffe left in the kitchen.
-ValueError, if the coffe ran out in the kitchen
+None, just a print message with the consumed_amount delta.
 
 ### ```fridge_space_left```
 Calculates the free space in the fridge_space
@@ -52,3 +45,15 @@ Calculates the free space in the fridge_space
 ### Arguments
 * ```food_amount```
   * data type: integer
+
+### Return value
+None, just a print message with the food_amount delta.
+
+### ```who_is_in_the_kitchen```
+Represents the method for mentors and students in the kitchen.
+
+#### Arguments
+None
+
+### Return value
+A print out for mentors and students in the kitchen.
