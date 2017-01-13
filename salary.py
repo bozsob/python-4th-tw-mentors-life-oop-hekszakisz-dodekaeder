@@ -23,7 +23,7 @@ class Salary:
                                                                                      .days) + " nap van még hátra a következő fizetésig.\n")
 
     def warning_messages(self):
-        if (self.pay_date - self.now).days >= 5:
+        if (self.pay_date - self.now).days >= 5 and (self.pay_date - self.now).days < 10:
             print("\nHabzsi-dőzsi van kispajtás!!! Basszál beljebb!!\n")
         if (self.pay_date - self.now).days >= 10 and (self.pay_date - self.now).days < 20:
             print("\nLassan vegyél vissza a sörikéből komám!\n")
